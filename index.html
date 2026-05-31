@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karne - Politique de Confidentialité</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karne - Privacy Policy</title>
 
-    <style>
-        body {
-            background-color: #f2f2f5;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f5;
+        color: #333;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-        }
+    .container {
+        max-width: 850px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 30px;
+    }
 
-        h1, h2 {
-            text-align: center;
-        }
+    h1, h2 {
+        text-align: center;
+    }
 
-        p {
-            line-height: 1.6;
-            font-size: 14px;
-        }
+    .lang-switch {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-        .lang {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    .lang-switch button {
+        margin: 5px;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #3a50f5;
+        color: white;
+    }
 
-        .lang a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #3a50f5;
-            font-weight: bold;
-        }
+    .section {
+        display: none;
+        line-height: 1.6;
+    }
 
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 12px;
-            color: #777;
-        }
+    .active {
+        display: block;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+    ul {
+        padding-left: 20px;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 12px;
+        color: gray;
+    }
+
+    /* Arabic support */
+    .rtl {
+        direction: rtl;
+        text-align: right;
+    }
+</style>
 </head>
 
 <body>
@@ -61,64 +74,101 @@
 <div class="container">
 
     <h1>📄 Karne</h1>
-    <h2>Politique de Confidentialité & Suppression de compte</h2>
+    <h2 id="title">Privacy Policy</h2>
 
-    <div class="lang">
-        <a href="#">Français</a>
-        <a href="#">English</a>
-        <a href="#">العربية</a>
+    <!-- Lang Buttons -->
+    <div class="lang-switch">
+        <button onclick="setLang('fr')">FR</button>
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('ar')">AR</button>
     </div>
 
-    <h3>1. Suppression de votre compte</h3>
-    <p>
-        Conformément aux directives de l'App Store d'Apple et de Google Play,
-        vous pouvez supprimer votre compte et vos données personnelles à tout moment depuis l'application.
-    </p>
+    <!-- FR -->
+    <div id="fr" class="section active">
+        <h3>Suppression de compte</h3>
+        <p>Vous pouvez supprimer votre compte depuis l'application.</p>
+        <ul>
+            <li>Ouvrir l'application</li>
+            <li>Profil → Paramètres</li>
+            <li>Supprimer mon compte</li>
+        </ul>
 
-    <ul>
-        <li>Ouvrez l'application Karne.</li>
-        <li>Allez dans Profil → Paramètres.</li>
-        <li>Appuyez sur "Supprimer mon compte".</li>
-        <li>Confirmez la suppression.</li>
-    </ul>
+        <h3>Données collectées</h3>
+        <ul>
+            <li>Nom, prénom, téléphone</li>
+            <li>Transactions et activités</li>
+            <li>Tokens de session</li>
+        </ul>
 
-    <h3>2. Conséquences de la suppression</h3>
-    <ul>
-        <li>Données anonymisées immédiatement et de façon irréversible.</li>
-        <li>Photo de profil supprimée définitivement.</li>
-        <li>Transactions affichées sous "Utilisateur Supprimé".</li>
-        <li>Numéro de téléphone dissocié de l’historique.</li>
-    </ul>
+        <h3>Sécurité</h3>
+        <p>Les données sont sécurisées via HTTPS et bcrypt.</p>
+    </div>
 
-    <h3>3. Données collectées</h3>
-    <ul>
-        <li>Identité : nom, prénom, numéro de téléphone.</li>
-        <li>Contenu : Karnes, transactions, rappels.</li>
-        <li>Technique : tokens JWT, logs anonymes.</li>
-    </ul>
+    <!-- EN -->
+    <div id="en" class="section">
+        <h3>Account Deletion</h3>
+        <p>You can delete your account anytime from the app.</p>
+        <ul>
+            <li>Open the app</li>
+            <li>Profile → Settings</li>
+            <li>Delete my account</li>
+        </ul>
 
-    <p>
-        Nous ne vendons ni ne partageons vos données avec des tiers à des fins commerciales.
-    </p>
+        <h3>Data Collected</h3>
+        <ul>
+            <li>Name, phone number</li>
+            <li>Transactions and activities</li>
+            <li>Session tokens</li>
+        </ul>
 
-    <h3>4. Sécurité</h3>
-    <p>
-        Les mots de passe sont hachés (bcrypt). Les communications sont sécurisées via HTTPS.
-        Les tokens expirent après 30 jours.
-    </p>
+        <h3>Security</h3>
+        <p>All data is secured using HTTPS and bcrypt hashing.</p>
+    </div>
 
-    <h3>5. Contact</h3>
-    <p>
-        Pour toute question : <br>
-        <strong>contact@ia-vision.com</strong>
-    </p>
+    <!-- AR -->
+    <div id="ar" class="section rtl">
+        <h3>حذف الحساب</h3>
+        <p>يمكنك حذف حسابك في أي وقت من التطبيق.</p>
+        <ul>
+            <li>فتح التطبيق</li>
+            <li>الملف الشخصي → الإعدادات</li>
+            <li>حذف الحساب</li>
+        </ul>
+
+        <h3>البيانات التي نجمعها</h3>
+        <ul>
+            <li>الاسم ورقم الهاتف</li>
+            <li>المعاملات والأنشطة</li>
+            <li>رموز الجلسة</li>
+        </ul>
+
+        <h3>الأمان</h3>
+        <p>يتم تأمين البيانات باستخدام HTTPS و bcrypt.</p>
+    </div>
 
     <div class="footer">
-        Dernière mise à jour : 29 Mai 2026 <br>
-        © 2026 · Karne. All rights reserved.
+        © 2026 Karne. All rights reserved.
     </div>
 
 </div>
+
+<script>
+function setLang(lang) {
+    document.getElementById("fr").classList.remove("active");
+    document.getElementById("en").classList.remove("active");
+    document.getElementById("ar").classList.remove("active");
+
+    document.getElementById(lang).classList.add("active");
+
+    const titles = {
+        fr: "Politique de Confidentialité",
+        en: "Privacy Policy",
+        ar: "سياسة الخصوصية"
+    };
+
+    document.getElementById("title").innerText = titles[lang];
+}
+</script>
 
 </body>
 </html>
